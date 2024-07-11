@@ -15,7 +15,7 @@ This repository contains a full-stack web application for managing event reserva
 ### Backend
 - **Node.js**: v20.12.2
 - **Express**: v4.19.2
-- **PostgreSQL**: Database integration using `pg`
+- **PostgreSQL**: version 16.3 Database integration using `pg`
 - **TypeScript**: v5.4.5
 - **Session Management**: `express-session` and `connect-pg-simple`
 - **Rate Limiting**: `express-rate-limit`
