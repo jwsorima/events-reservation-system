@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://placehold.co/16x16/DDDDDD/1045CC?text=Logo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Events Rerservation System"/>
+    <meta property="og:title" content="Events Reservation System"/>
+    <meta property="og:description" content="Events Rerservation System"/>
+    <meta property="og:image" content="https://placehold.co/200x200/DDDDDD/1045CC.webp" />
+    <meta property="og:image:alt" content="Logo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <title>Events Reservation System</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname !== '/') {
+          const preloadLink = document.getElementById('preload-image');
+          if (preloadLink) {
+            preloadLink.parentNode.removeChild(preloadLink);
+          }
+        }
+      });
+    </script>
+    <link rel="preload" href="https://placehold.co/1920x2635/DDDDDD/1045CC?text=Image" as="image" type="image/webp" id="preload-image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+name: reserve-api
+services:
+  - name: reserve-api
+    build_command: npm run build
+    run_command: node dist/server.js
