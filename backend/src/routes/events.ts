@@ -1,13 +1,13 @@
 import { Router, Request, Response } from 'express';
 const events = Router();
+import { dbQuery } from "../db/index.js"
+import { getReservationsWithPage } from '../db/reservationsQueries.js';
 import { 
   createEvent,
-  dbQuery, 
   getAllEvents, 
   getAllEventsWithPage, 
-  getAvailableEvents,
-  getReservationsWIthPage, 
-} from "../db/index.js"
+  getAvailableEvents
+} from '../db/eventsQueries.js';
 import { checkAuth } from '../middlewares/auth.js';
 import { 
   validateCreateEvent, 
@@ -72,7 +72,7 @@ events.get('/:id/reservations', rateLimitAdmin, checkAuth, validateGetEventsRese
   const eventId = parseInt(req.params.id);
 
   try {
-    const { reservations, total } = await getReservationsWIthPage(eventId, limit, offset)
+    const { reservations, total } = await getReservationsWithPage(eventId, limit, offset)
     res.json({ reservations: reservations.rows, total: parseInt(total.rows[0].count, 10) });
   } catch (error) {
     if (error instanceof Error) {

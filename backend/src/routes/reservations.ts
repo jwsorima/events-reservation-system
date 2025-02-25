@@ -1,11 +1,13 @@
 import { Router, Request, Response } from 'express';
 const reservations = Router();
 import {
-  dbQuery, 
-  getEvent, 
+  dbQuery,
+} from "../db/index.js";
+import { 
   getReservation, 
   updateReservationScannedStatus 
-} from "../db/index.js"
+} from '../db/reservationsQueries.js';
+import { getEvent } from '../db/eventsQueries.js';
 import { createReservationURL, isUuidV4 } from "../helpers/stringHelper.js"
 import { sendEmailReservationConfirm } from '../helpers/emailHelper.js';
 import { checkAuth } from '../middlewares/auth.js';
